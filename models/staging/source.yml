@@ -1,0 +1,82 @@
+version: 2
+
+sources:
+  - name: raw_data
+    schema: sap_adw
+    tables:
+      - name: customer  
+        description: "esta é a tabela com informações do cliente"
+        columns:
+          - name: customerid
+            tests:
+              - unique
+              - not null
+      - name: person  
+        description: "esta é a tabela com informações da pessoa"
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not null
+      - name: emailaddress
+        description: "tabela com o email das pessoas"
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not null
+          - name: emailaddressid
+            tests:
+              - unique
+              - not null
+      - name: salesorderheadersalesreason
+        description: " tabela que liga as tabelas salesorderheader e salesreason"
+        columns:
+          - name: salesorderid
+            tests:
+            - unique
+            - not null
+      - name: salesreason
+        description: "tabela coma razão da compra"
+        columns:
+          - name: salesreasonid
+      - name: salesorderheader  
+        description: "esta é a tabela com informações do pedido da venda"
+        columns:
+          - name: SalesOrderID
+            tests:
+              - unique
+              - not null
+
+      - name: salesorderdetail  
+        description: "esta é a tabela com detalhes da venda"
+        columns:
+          - name: SalesOrderID
+          - name: salesorderdetailid
+      - name: specialofferproduct
+        description: "esta tabela liga salesorderdetail a specialoffer"
+      - name: specialoffer
+        description: "tabela de ofertasespeciais de produtos"   
+      - name: product
+        description: "tabela com informações do produto"
+      - name: productsubcategory
+        description: "tabela com a subcategoria do produto"
+      - name: productcategory
+        description: "tabela com a categoria do produto"
+      - name: address
+        description: "tabela com endereços"
+      - name: stateprovince
+        description: "tabela província do estado"
+      - name: salesterritory
+        description: "tabela territorio da venda"
+      - name: countryregion
+        description: "tabela com nome - sigla do país"
+      - name: store
+        description: "tabela com informações da loja cliente"
+      - name: salesperson
+        description: "tabela com informações de vendas de um vendedor"   
+      - name: employee
+        description: "tabela com informações do funcionario"
+
+
+      

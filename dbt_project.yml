@@ -35,11 +35,16 @@ models:
   my_new_project: # <-- Name of the project. If you renamed your project you have to change this as well
     
     # Applies to all files under models/example/
-    example:
-      materialized: view
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
 
 
 seeds:
   my_new_project: # <-- Name of the project. If you renamed your project you have to change this as well
     sap_adventure_works:
       +schema: sap_adw
+
