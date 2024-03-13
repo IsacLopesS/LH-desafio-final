@@ -11,6 +11,7 @@ with
           , unitpricediscount
           , rowguid
           , modifieddate
+          , (unitprice *(1-unitpricediscount))*orderqty as lineTotal
 
       from {{source('raw_data', 'salesorderdetail') }}
     )

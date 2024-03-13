@@ -57,6 +57,7 @@ with
                 , orderqty
                 , unitprice
                 , unitpricediscount
+                , linetotal
                 , productid
                 , specialofferid
                 , description_special_offer
@@ -84,6 +85,7 @@ with
                 , detalhes_pedidos.specialofferid
                 , detalhes_pedidos.description_special_offer
                 , detalhes_pedidos.discountpct
+                , detalhes_pedidos.linetotal
                 , detalhes_pedidos.type_special_offer
                 , detalhes_pedidos.category
                 , detalhes_pedidos.startdate

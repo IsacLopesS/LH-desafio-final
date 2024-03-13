@@ -41,6 +41,7 @@ with
           , specialofferid
           , unitprice
           , unitpricediscount
+          , linetotal
       from {{ ref('stg_sales_order_detail')}}
     )
 
@@ -52,6 +53,7 @@ with
           , detalhes_do_pedido.orderqty
           , detalhes_do_pedido.unitprice
           , detalhes_do_pedido.unitpricediscount
+          , detalhes_do_pedido.linetotal
           , join_oferta_especial_e_ids.*
 
       from detalhes_do_pedido  

@@ -4,7 +4,7 @@ with
           territoryid
           , name as sales_territory_name
           , countryregioncode
-          , 'group' as sales_territory_group
+          , `group` as sales_territory_group
           , salesytd
           , saleslastyear
           , costytd

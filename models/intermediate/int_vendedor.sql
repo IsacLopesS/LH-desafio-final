@@ -9,7 +9,7 @@ with
         , salesytd
         , saleslastyear
                       
-      from {{ ref('salesperson') }}
+      from {{ ref('stg_sales_person') }}
       )
 
 ,   territorio_venda as (
