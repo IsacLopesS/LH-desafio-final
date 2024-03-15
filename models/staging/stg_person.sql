@@ -44,14 +44,20 @@ with
           ,middlename
           ,lastname
           ,suffix
-          ,emailpromotion
+          ,case 
+            when emailpromotion = 0 then 'nao desejado'
+            when emailpromotion = 1 then 'desejado apenas da adw'
+            when emailpromotion = 2 then 'desejado adw e parceiros'
+            else cast(emailpromotion as string)
+          end as emailpromotion
           ,additionalcontactinfo
           ,demographics
           ,rowguid
           ,modifieddate
 
       from updated_persontype
-)    
+) 
+
 
 select *
 from person_type

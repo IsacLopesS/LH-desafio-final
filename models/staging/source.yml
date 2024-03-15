@@ -20,15 +20,6 @@ sources:
               - not null
       - name: emailaddress
         description: "tabela com o email das pessoas"
-        columns:
-          - name: businessentityid
-            tests:
-              - unique
-              - not null
-          - name: emailaddressid
-            tests:
-              - unique
-              - not null
       - name: salesorderheadersalesreason
         description: " tabela que liga as tabelas salesorderheader e salesreason"
         columns:

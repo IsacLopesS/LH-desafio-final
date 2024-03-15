@@ -15,7 +15,6 @@ with
         , emailpromotion
         , additionalcontactinfo
         , demographics as persondemographics
-        , emailaddressid
         , emailaddress
       from {{ ref('int_clientes') }} 
     )

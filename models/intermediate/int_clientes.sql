@@ -30,13 +30,11 @@ with
       from {{ ref('stg_person') }}
     )
 
-,   dados_email as (
+,   email_data as (
       select 
-          businessentityid
-          ,emailaddressid
-          ,emailaddress
-          ,rowguid
-          ,modifieddate
+        businessentityid
+        , emailaddressid
+        , emailaddress
       from {{ ref('stg_emailadress') }}
     )
 
@@ -67,13 +65,10 @@ with
 ,   join_cliente_pessoa_email as (
       select 
         join_cliente_pessoa.*
-        , dados_email.emailaddressid
-        , dados_email.emailaddress
-        , dados_email.rowguid
-        , dados_email.modifieddate
+        , email_data.emailaddress 
       from join_cliente_pessoa
-      left join dados_email
-        on join_cliente_pessoa.businessentityid = dados_email.businessentityid
+      left join email_data
+        on join_cliente_pessoa.businessentityid = email_data.businessentityid
 
 )
 

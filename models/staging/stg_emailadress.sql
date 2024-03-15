@@ -9,6 +9,9 @@ with
       from {{source('raw_data', 'emailaddress') }}
     )
 
-select *
+select 
+    businessentityid
+    ,emailaddressid
+    ,emailaddress.emailaddress as emailaddress
 from email_data
 
