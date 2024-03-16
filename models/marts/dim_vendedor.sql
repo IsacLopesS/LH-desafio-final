@@ -5,7 +5,7 @@ with
         , jobtitle
         , persontype
         , complete_name
-        , emailaddress.emailaddress as emailaddress
+        , emailaddress
         , salesquota
         , bonus
         , commissionpct

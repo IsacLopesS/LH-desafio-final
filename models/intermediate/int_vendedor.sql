@@ -22,8 +22,6 @@ with
           , saleslastyear
           , costytd
           , costlastyear
-          , rowguid
-          , modifieddate
 
       from {{ref('stg_sales_territory') }}
     )
@@ -32,8 +30,6 @@ with
             businessentityid
             ,emailaddressid
             ,emailaddress
-            ,rowguid
-            ,modifieddate
         from {{ref('stg_emailadress') }}
     )
 

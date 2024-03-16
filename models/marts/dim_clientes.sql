@@ -11,6 +11,7 @@ with
         , firstname
         , middlename
         , lastname
+        , concat(title,' ', firstname, ' ', middlename, ' ', lastname) as completename
         , suffix
         , emailpromotion
         , additionalcontactinfo

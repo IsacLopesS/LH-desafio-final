@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: fct_vendas
+    description: "esta é a fato vendas"
+    columns:
+      - name: venda_sk
+        description: "identificador unico de venda: salesorderid + salesorderdetailid + salesreasonid"
+        tests:
+          - not_null
+          - unique
+

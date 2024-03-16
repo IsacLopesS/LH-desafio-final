@@ -3,7 +3,7 @@ with
       select
           salesorderid
           , revisionnumber
-          , orderdate
+          , cast(cast(orderdate as datetime) as date) as orderdate
           , duedate
           , shipdate
           , status as status_num

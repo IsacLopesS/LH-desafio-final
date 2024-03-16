@@ -111,10 +111,7 @@ with
       , emailpromotion
       , additionalcontactinfo
       , persondemographics
-      , emailaddressid
-      , emailaddressid
-      , emailaddress.emailaddress
-      , emailaddress.modifieddate
+      , emailaddress
       , storename
       , storedemographics
       , store_modifieddate

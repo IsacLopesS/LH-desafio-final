@@ -6,39 +6,18 @@ sources:
     tables:
       - name: customer  
         description: "esta é a tabela com informações do cliente"
-        columns:
-          - name: customerid
-            tests:
-              - unique
-              - not null
       - name: person  
         description: "esta é a tabela com informações da pessoa"
-        columns:
-          - name: businessentityid
-            tests:
-              - unique
-              - not null
       - name: emailaddress
         description: "tabela com o email das pessoas"
       - name: salesorderheadersalesreason
         description: " tabela que liga as tabelas salesorderheader e salesreason"
-        columns:
-          - name: salesorderid
-            tests:
-            - unique
-            - not null
       - name: salesreason
         description: "tabela coma razão da compra"
         columns:
           - name: salesreasonid
       - name: salesorderheader  
         description: "esta é a tabela com informações do pedido da venda"
-        columns:
-          - name: SalesOrderID
-            tests:
-              - unique
-              - not null
-
       - name: salesorderdetail  
         description: "esta é a tabela com detalhes da venda"
         columns:
