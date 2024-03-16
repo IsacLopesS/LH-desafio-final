@@ -25,7 +25,7 @@ with
         , int_agg.freight
         , int_agg.totaldue
         , int_agg.linetotal
-        , int_agg.salesreasonid
+        , int_agg.salesreasonid territo
         , int_agg.reason_name
         , int_agg.orderqty
         , int_agg.unitprice
@@ -55,6 +55,9 @@ with
         territoryid
         , salespersonid
         , orderdate
+        , min(sales_territory_name) as sales_territory_name
+        , min(sales_territory_group) as sales_territory_group
+        , min(countryregioncode) as countryregioncode
         , min(persontype) as persontype
         , min(complete_name) as complete_name
         , min(emailaddress) as emailaddress
