@@ -51,7 +51,7 @@ with
           , saleslastyear
           , costytd
           , costlastyear
-      from {{ ref('stg_sales_territory')}}
+      from {{ ref('dim_territorio')}}
   )
 
   ,join_fctvendas_vendedor as (

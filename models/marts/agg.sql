@@ -63,9 +63,9 @@ with
         , min(emailaddress) as emailaddress
         , min(onlineorderflag) as onlineorderflag
         , COUNT(venda_sk) AS numero_de_vendas
-        , SUM(linetotal) AS valor_liquido_total
+        , SUM(subtotal) AS valor_liquido_total
         , SUM(totaldue) AS valor_bruto_total
-        , AVG(linetotal) AS avg_valor_liquido
+        , AVG(subtotal) AS avg_valor_liquido
         , avg(totaldue) as avg_valor_bruto
       from id_vendedor_nulo
       group by 
